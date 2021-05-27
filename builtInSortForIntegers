@@ -1,0 +1,16 @@
+/**
+ * Uses the Array.sort() method along with a custom function so that it can be used on integers
+ * 
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortArray = function(nums) {
+  
+    let result = [];
+    
+    result = nums.sort(function(a,b){return a - b});
+        
+    console.log('result = ', result);
+    
+    return result; 
+};
