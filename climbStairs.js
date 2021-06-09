@@ -11,16 +11,10 @@ var climbStairs = function(n) {
     
     dp[0] = 0;
     dp[1] = 1;
+    dp[2] = 2;
     
-    for(let i=2; i<=n; i++){
-        
-        if(i % 2 === 0) {
-            // add 2 possibilities for even numbered stairs
-            dp[i] = dp[i-1] + 2;
-        } else {
-            // add one possibility for odd numbered stairs 
-            dp[i] = dp[i-1] + 1;
-        }
+    for(let i=3; i<=n; i++){   
+        dp[i] = dp[i-1] + dp[i-2]; 
     }
     
     if(dp[n]) return dp[n];
